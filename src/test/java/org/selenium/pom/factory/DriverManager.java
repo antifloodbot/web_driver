@@ -4,6 +4,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.safari.SafariDriver;
 import org.selenium.pom.constants.DriverType;
 
 public class DriverManager {
@@ -18,6 +19,10 @@ public class DriverManager {
             case FIREFOX -> {
                 WebDriverManager.firefoxdriver().setup();
                 yield new FirefoxDriver();
+            }
+            case SAFARI -> {
+                WebDriverManager.safaridriver().setup();
+                yield new SafariDriver();
             }
         };
         driver.manage().window().maximize();
