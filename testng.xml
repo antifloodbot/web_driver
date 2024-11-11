@@ -4,7 +4,10 @@
     <test name="Chrome" parallel="methods">
         <parameter name="browser" value="CHROME"/>
         <classes>
-            <class name="org.selenium.pom.tests.MyFirstTestCase"/>
+<!--            <class name="org.selenium.pom.tests.MyFirstTestCase"/>-->
+            <class name="org.selenium.pom.tests.NavigationTest"/>
+            <class name="org.selenium.pom.tests.SearchTest"/>
+            <class name="org.selenium.pom.tests.AddToCartTest"/>
         </classes>
     </test>
 <!--    <test name="Firefox" parallel="methods">-->

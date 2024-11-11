@@ -44,6 +44,11 @@ public class StorePage extends BasePage {
         return this;
     }
 
+    public StorePage load() {
+        load("store");
+        return this;
+    }
+
     public CartPage clickViewCart() {
         waitShortTime.until(ExpectedConditions.elementToBeClickable(viewCartLink)).click();
         return new CartPage(driver);
